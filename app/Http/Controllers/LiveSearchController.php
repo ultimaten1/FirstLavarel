@@ -38,7 +38,7 @@ class LiveSearchController extends Controller
                                 </tr>';
                 }
     
-                $output .= '</tbody>
+                $output .= '    </tbody>
                             </table>';
             }
             else {
