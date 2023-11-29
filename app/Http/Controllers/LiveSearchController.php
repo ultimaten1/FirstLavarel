@@ -47,6 +47,33 @@ class LiveSearchController extends Controller
     
             return $output;
         }
+    }  
+    
+    public function loadInitialData(Request $request) {
+        $data = EmployeeModal::all();
+    
+        $output = '<table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">City</th>
+                            </tr>
+                        </thead>                           
+                        <tbody>';
+    
+        foreach ($data as $row) {
+            $output .= '<tr>
+                            <th scope="row">'.$row->id.'</th>
+                            <td>'.$row->name.'</td>
+                            <td>'.$row->city.'</td>
+                        </tr>';
+        }
+    
+        $output .= '</tbody>
+                    </table>';
+    
+        return $output;
     }    
 }
 

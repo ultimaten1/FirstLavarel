@@ -15,9 +15,12 @@ use App\Http\Controllers\LiveSearchController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('live_search');
 });
 
 Route::get('live_search', [LiveSearchController::class, 'index']);
 
 Route::get('search', [LiveSearchController::class, 'liveSearchTable']);
+
+// Thêm route mới để tải dữ liệu ban đầu
+Route::get('load_initial_data', [LiveSearchController::class, 'loadInitialData']);

@@ -28,9 +28,20 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script type="text/javascript">
             $(document).ready(function() {
+                // Tải dữ liệu ban đầu khi trang được tải
+                $.ajax({
+                    url: "load_initial_data",
+                    type: "GET",
+                    success:function(data) {
+                        $('#search_list').html(data);
+                    }
+                });
+
+                // Xử lý sự kiện khi người dùng nhập vào ô tìm kiếm
                 $('#search').on('keyup', function() {
                     var query = $(this).val();
 
+                    // Gửi request Ajax để tìm kiếm
                     $.ajax({
                         url: "search",
                         type: "GET",
