@@ -8,18 +8,20 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div class="container" style="margin-top: 50px;">
-            <div class="row">
-                <div class="col-lg-3"></div>
-                <div class="col-lg-6">
-                    <h3 class="text-center text-primary">Search</h3>
-                    <div class="form-group">
-                        <h4>Type by ID, Name and City</h4>
-                        <input type="text" name="search" id="search" placeholder="Enter your text name" class="form-control" onfocus="this.value='' ">
+        <div style="background-color: #a9def9">
+            <div class="container" style="margin-top: 50px;">
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <h3 class="text-center text-primary">Search</h3>
+                        <div class="form-group">
+                            <h4>Type by ID, Name and City</h4>
+                            <input type="text" name="search" id="search" placeholder="Enter your text name" class="form-control" onfocus="this.value='' ">
+                        </div>
+                        <div id="search_list"></div>
                     </div>
-                    <div id="search_list"></div>
+                    <div class="col-lg-3"></div>
                 </div>
-                <div class="col-lg-3"></div>
             </div>
         </div>
 
